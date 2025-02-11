@@ -1,0 +1,10 @@
+services:
+  tournament-viewer:
+    image: "ghcr.io/hannahpadd/eurocup2025/tournamentviewer:latest"
+    ports:
+      - 127.0.0.1:5137:5137
+
+  tournament-manager-backend:
+    image: "ghcr.io/hannahpadd/eurocup2025/tournament_manager_backend:latest"
+    ports: 
+      - 127.0.0.1:3000:3000

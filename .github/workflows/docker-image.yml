@@ -1,0 +1,61 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "rewrite-backend" ]
+  pull_request:
+    branches: [ "rewrite-backend" ]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Docker metadata for backend
+        id: meta_backend
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository }}/tournament_manager_backend
+          tags: |
+            type=sha
+            type=raw,value=latest
+
+      - name: Build & Push backend
+        uses: docker/build-push-action@v6
+        with:
+          context: ./tournament_manager_backend
+          file: tournament_manager_backend/Dockerfile
+          push: true
+          tags: ${{ steps.meta_backend.outputs.tags }}
+          labels: ${{ steps.meta_backend.outputs.labels }}
+
+      - name: Set up Docker metadata for viewer
+        id: meta_viewer
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository }}/tournamentviewer
+          tags: |
+            type=sha
+            type=raw,value=latest
+
+      - name: Build & Push viewer
+        uses: docker/build-push-action@v6
+        with:
+          context: ./TournamentViewer
+          file: TournamentViewer/Dockerfile
+          push: true
+          tags: ${{ steps.meta_viewer.outputs.tags }}
+          labels: ${{ steps.meta_viewer.outputs.labels }}
