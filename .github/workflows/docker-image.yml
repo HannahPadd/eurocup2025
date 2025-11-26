@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "rewrite-backend" ]
+    branches: [ "testing" ]
   pull_request:
-    branches: [ "rewrite-backend" ]
+    branches: [ "testing" ]
 
 jobs:
   build-and-push:
