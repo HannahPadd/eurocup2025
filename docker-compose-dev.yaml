@@ -1,0 +1,18 @@
+services:
+  tournament-viewer:
+    build:
+      context: ./TournamentViewer
+      dockerfile: Dockerfile
+    volumes:
+        - ./TournamentViewer/src:/app/src
+    ports:
+      - 127.0.0.1:5173:5173
+
+  tournament-manager-backend:
+    build:
+      context: ./tournament_manager_backend
+      dockerfile: Dockerfile
+    volumes:
+        - ./tournament_manager_backend/src:/app/src
+    ports: 
+      - 127.0.0.1:3000:3000
