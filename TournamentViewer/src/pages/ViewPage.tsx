@@ -9,7 +9,7 @@ import Rankings from "../components/view/Rankings.tsx";
 export default function ViewPage() {
   return (
     <div className=" text-white">
-      <h1 className="text-3xl text-center text-rossoTesto">
+      <h1 className="text-3xl text-center theme-text mt-6 mb-6">
         TagTeamTournament 2024
       </h1>
       <Tab.Group>
@@ -19,7 +19,7 @@ export default function ViewPage() {
               classNames(
                 "py-2 px-4 text-lg",
                 selected
-                  ? "border-b-2 border-blue-500 font-bold text-rossoTesto"
+                  ? "border-b-2 border-blue-500 font-bold theme-text"
                   : "text-gray-500",
               )
             }
@@ -27,7 +27,7 @@ export default function ViewPage() {
             <div className="flex flex-row gap-3 items-center">
               <FontAwesomeIcon
                 icon={faCircle}
-                className="text-rossoTesto text-sm animate-pulse"
+                className="theme-text text-sm animate-pulse"
               />
               <span>LIVE</span>
             </div>
@@ -37,7 +37,7 @@ export default function ViewPage() {
               classNames(
                 "py-2 px-4 text-lg",
                 selected
-                  ? "border-b-2 border-blue-500 font-bold text-rossoTesto"
+                  ? "border-b-2 border-blue-500 font-bold theme-text"
                   : "text-gray-500",
               )
             }
@@ -51,7 +51,7 @@ export default function ViewPage() {
               classNames(
                 "py-2 px-4 text-lg",
                 selected
-                  ? "border-b-2 border-blue-500 font-bold text-rossoTesto"
+                  ? "border-b-2 border-blue-500 font-bold theme-text"
                   : "text-gray-500",
               )
             }

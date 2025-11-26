@@ -91,7 +91,7 @@ export default function LiveScores() {
   return (
     <div className="text-bianco w-auto">
       <div className="flex flex-row gap-3 items-center">
-        <h2 className="text-rossoTesto">
+        <h2 className="theme-text">
           Now playing: {sortedScores[0]?.score.song.split("/")[1]}
         </h2>
         <div>

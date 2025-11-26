@@ -24,7 +24,7 @@ h3 {
   background-color: #b91c1c !important; /* Tailwind bg-red-700 */
 }
 
-.rankings-title {
+.rankings-title, .theme-text  {
   color: #f15467 !important;
 }
 
