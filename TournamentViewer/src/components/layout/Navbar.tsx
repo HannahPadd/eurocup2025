@@ -11,7 +11,7 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
           <img src="/icon.png" alt="logo" className="h-12 w-12 rounded-lg" />
         </span>
         <h2 className="text-white font-bold text-xl">
-          TagTeamTournament Standings
+          Eurocup 2026 Standings
         </h2>
         <div className="ml-auto flex items-center">
           <select

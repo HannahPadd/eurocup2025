@@ -204,7 +204,7 @@ function SongItem({ song }: { song: Song }) {
             <span
               key={i}
               className={`${
-                i + 1 <= song.difficulty ? "bg-rossoTesto" : "bg-gray-300"
+                i + 1 <= song.difficulty ? "bg-lighter" : "bg-gray-300"
               } h-4 rounded-sm w-2 `}
             ></span>
           ))}

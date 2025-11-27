@@ -27,6 +27,12 @@ h3 {
 .rankings-title, .theme-text  {
   color: #f15467 !important;
 }
+.bg-lighter {
+    background-color: #fa7c89 !important;
+}
+.border-bg-lighter {
+    border-color: #b91c1c !important;
+}
 
 .animate-first-place {
   animation: first-place 0.5s infinite;

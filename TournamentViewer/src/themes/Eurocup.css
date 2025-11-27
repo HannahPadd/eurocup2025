@@ -25,11 +25,18 @@ h3 {
 }
 
 .rankings-title, .theme-text {
-  color: #2563EB !important;
+  color: #49ABD6 !important;
 }
 
 .theme-text {
-    color: #2563EB !important;
+    color: #49ABD6 !important;
+}
+
+.bg-lighter {
+    background-color: #2e8bb5 !important;
+}
+.border-bg-lighter {
+    border-color: #1E40AF !important;
 }
 
 .animate-first-place {

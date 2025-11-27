@@ -57,7 +57,7 @@ export default function ManagePage() {
               localStorage.setItem("apiKey", ak);
             }
           }}
-          className="bg-rossoTesto text-white p-2 rounded-lg"
+          className="bg-lighter text-white p-2 rounded-lg"
         >
           Set API Key
         </button>

@@ -10,7 +10,7 @@ export default function ViewPage() {
   return (
     <div className=" text-white">
       <h1 className="text-3xl text-center theme-text mt-6 mb-6">
-        TagTeamTournament 2024
+        ITG Eurocup 2026
       </h1>
       <Tab.Group>
         <Tab.List className="flex flex-row gap-10 border-b mt-5">
@@ -27,7 +27,7 @@ export default function ViewPage() {
             <div className="flex flex-row gap-3 items-center">
               <FontAwesomeIcon
                 icon={faCircle}
-                className="theme-text text-sm animate-pulse"
+                className="text-sm animate-pulse text-red-500"
               />
               <span>LIVE</span>
             </div>

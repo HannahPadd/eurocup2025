@@ -13,7 +13,7 @@ const themeFiles: Record<string, string> = {
 };
 
 function App() {
-  const [theme, setTheme] = useState("TagTeam");
+  const [theme, setTheme] = useState("Eurocup");
 
   useEffect(() => {
     // Remove previous theme CSS
@@ -23,7 +23,7 @@ function App() {
     const link = document.createElement("link");
     link.id = "theme-css";
     link.rel = "stylesheet";
-    link.href = themeFiles[theme] || themeFiles["TagTeam"];
+    link.href = themeFiles[theme] || themeFiles["Eurocup"];
     document.head.appendChild(link);
     return () => {
       link.remove();

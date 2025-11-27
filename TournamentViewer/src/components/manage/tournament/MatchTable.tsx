@@ -355,18 +355,18 @@ export default function MatchTable({
                 <div
                   className={`grid grid-cols-${
                     match.rounds.length + 2
-                  } w-full bg-rossoTesto rounded-t-lg`}
+                  } w-full bg-lighter rounded-t-lg`}
                   style={{
                     gridTemplateColumns: `repeat(${
                       match.rounds.length + 2
                     }, 1fr)`,
                   }}
                 >
-                  <div className=" border-rossoTag p-2">
+                  <div className=" border-bg-lighter p-2">
                     <div className="text-center font-bold text-rossoTag"></div>
                   </div>
                   {match.rounds.map((round, i) => (
-                    <div key={i} className="border-x border-rossoTag p-2">
+                    <div key={i} className="border-x border-bg-lighter p-2">
                       <div className="text-center font-bold text-blue-100">
                         {round.song.title}
                         {controls && isActive && (

@@ -97,7 +97,7 @@ export default function LiveScores() {
         <div>
           <button
             onClick={() => setShowJudgements((prev) => !prev)}
-            className="text-bianco bg-rossoTesto p-0.5 text-xs rounded-md"
+            className="text-bianco bg-lighter p-0.5 text-xs rounded-md"
           >
             {showJudgements ? "Hide" : "Show"} judgements
           </button>
