@@ -1,10 +1,18 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { VitePWA } from 'vite-plugin-pwa';
+import manifest from './public/manifest.json';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "/",
-  plugins: [react()],
+  plugins: [react(), VitePWA({
+    registerType: 'autoUpdate',
+    manifest,
+    devOptions: {
+      enabled: true
+    }
+  })],
   preview: {
     host: true,
     port: 5173
@@ -12,7 +20,6 @@ export default defineConfig({
   server: {
     port: 5173,
     host: true,
-    origin: "http://0.0.0.0:5173",
-    allowedHosts: ["manager.itgeurocup.com"],
+    origin: "http://0.0.0.0:5173"
   },
 });
