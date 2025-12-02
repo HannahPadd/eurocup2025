@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import "./index.css";
 import ViewPage from "./pages/ViewPage";
 import ManagePage from "./pages/ManagePage";
+import SignUpPage from "./pages/SignUp";
 import Navbar from "./components/layout/Navbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -39,6 +40,7 @@ function App() {
           <Route path="/" element={<ViewPage />} />
           <Route path="/view" element={<ViewPage />} />
           <Route path="/manage" element={<ManagePage />} />
+          <Route path="/signup" element={<SignUpPage />} />
           <Route path="*" element={<ViewPage />}></Route>
         </Routes>
       </div>

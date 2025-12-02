@@ -16,3 +16,20 @@ services:
         - ./tournament_manager_backend/src:/app/src
     ports: 
       - 127.0.0.1:3000:3000
+
+  mariadb:
+    image: mariadb
+    restart: always
+    ports:
+      - 127.0.0.1:3306:3306
+    environment:
+      MARIADB_ROOT_PASSWORD: example
+    volumes:
+    - ./db:/var/lib/mysql:Z
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 127.0.0.1:8080:8080
+  
