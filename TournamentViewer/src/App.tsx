@@ -6,6 +6,7 @@ import ManagePage from "./pages/ManagePage";
 import Navbar from "./components/layout/Navbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SignUpPage from "./pages/SignUp";
 
 const themeFiles: Record<string, string> = {
   TagTeam: "/src/themes/TagTeam.css",
@@ -39,6 +40,7 @@ function App() {
           <Route path="/" element={<ViewPage />} />
           <Route path="/view" element={<ViewPage />} />
           <Route path="/manage" element={<ManagePage />} />
+          <Route path="/signup" element={<SignUpPage />} />
           <Route path="*" element={<ViewPage />}></Route>
         </Routes>
       </div>
