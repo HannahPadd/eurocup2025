@@ -5,7 +5,9 @@ import RegisterForm from "../components/manage/players/RegisterForm";
 export default function SignUpPage() {
     return (
         <div>
-            <h1 className="text-3xl">Sign up!</h1>
+            <div className="w-full max-w-sm mx-auto space-y-4">
+                <h1 className="text-3xl  mb-2 mt-4">Sign up!</h1>
+            </div>
             <div>
                 <RegisterForm/>
             </div>
