@@ -6,7 +6,7 @@ import { MatchAssignment } from './match_assignment.entity';
 
 @Entity()
 export class Player {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('uuid')
   id: number;
 
   @Column()

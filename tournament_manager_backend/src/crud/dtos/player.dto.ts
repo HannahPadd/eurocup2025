@@ -2,8 +2,13 @@ import { IsNotEmpty, IsNumber, IsString, IsOptional, } from 'class-validator';
 import { Type } from 'class-transformer';
 import { Team }  from '../entities';
 import { ApiProperty } from '@nestjs/swagger';
+import { PrimaryGeneratedColumn } from 'typeorm';
 
 export class CreatePlayerDto {
+  
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
+
   @ApiProperty({
     example: 'John Doe',
     description: 'Name of the player',
