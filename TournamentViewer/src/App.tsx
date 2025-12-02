@@ -3,10 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import "./index.css";
 import ViewPage from "./pages/ViewPage";
 import ManagePage from "./pages/ManagePage";
+import SignUpPage from "./pages/SignUp";
 import Navbar from "./components/layout/Navbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import SignUpPage from "./pages/SignUp";
 
 const themeFiles: Record<string, string> = {
   TagTeam: "/src/themes/TagTeam.css",
