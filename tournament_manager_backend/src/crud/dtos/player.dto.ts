@@ -14,6 +14,15 @@ export class CreatePlayerDto {
   name: string;
 
   @ApiProperty({
+    example: 'example@example.com',
+    description: 'Email of the player',
+  })
+  @IsNotEmpty()
+  @IsString()
+  @Type(() => String)
+  email: string;
+  
+  @ApiProperty({
     example: 'Password!',
     description: 'Player password',
   })
@@ -22,6 +31,15 @@ export class CreatePlayerDto {
   @Type(() => String)
   password: string;
   
+  @ApiProperty({
+    example: '',
+    description: 'api key for groovestats'
+  })
+  @IsOptional()
+  @IsString()
+  @Type(() => String)
+  groovestatsApi: string;
+
   @ApiProperty({
     example: 1,
     description: 'ID of the team the player belongs to',

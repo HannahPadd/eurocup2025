@@ -291,3 +291,8 @@ __pycache__/
 
 # DB folder
 db/*
+
+build.sh
+db.sh
+docker-compose-db.yaml
+docker-compose-dev.yaml

@@ -8,12 +8,14 @@ export default function RegisterForm() {
         name: string;
         email: string;
         password: string;
+        groovestatsApi: string;
     };
 
     const [formData, setFormData] = useState<SignUpFormState> ({
         name: '',
         email: '',
-        password: ''
+        password: '',
+        groovestatsApi: '',
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,6 +45,11 @@ export default function RegisterForm() {
                 <input type="password" name="password" onChange={handleChange}value={formData.password} required maxLength={30}/>
             </div>
 
+            <div>
+                <label htmlFor='groovestatsApi'>Groovestats Api:</label>
+                <input type="text" name="groovestatsApi" onChange={handleChange}value={formData.groovestatsApi} maxLength={30}/>
+            </div>
+            <hr />
             <div>
                 <button className="bg-lighter text-white p-2 rounded-lg">Sign up!</button>
             </div>

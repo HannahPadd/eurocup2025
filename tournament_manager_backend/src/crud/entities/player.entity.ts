@@ -12,8 +12,14 @@ export class Player {
   @Column()
   name: string;
 
+  @Column()
+  email: string;
+
   @Column({ default: "" })
   password: string;
+
+  @Column({ default: ""})
+  groovestatsApi: string;
 
   @OneToMany(() => Score, (score) => score.player, { cascade: true })
   scores: Score[]
