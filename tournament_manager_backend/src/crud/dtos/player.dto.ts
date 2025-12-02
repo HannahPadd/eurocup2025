@@ -67,6 +67,33 @@ export class UpdatePlayerDto {
   @Type(() => String)
   name: string;
 
+   @ApiProperty({
+    example: 'example@example.com',
+    description: 'New email of the player',
+  })
+  @IsNotEmpty()
+  @IsString()
+  @Type(() => String)
+  email: string;
+  
+  @ApiProperty({
+    example: 'Password!',
+    description: 'New player password',
+  })
+  @IsNotEmpty()
+  @IsString()
+  @Type(() => String)
+  password: string;
+  
+  @ApiProperty({
+    example: '',
+    description: 'New api key for groovestats'
+  })
+  @IsOptional()
+  @IsString()
+  @Type(() => String)
+  groovestatsApi: string;
+
   @ApiProperty({
     example: 2,
     description: 'New ID of the team the player belongs to',
