@@ -3,9 +3,6 @@ import { deletePlayer } from "../services/player/player.api";
 
 
 export default function SignUpPage() {
-
-    console.log(getPlayer(1));
-    console.log(deletePlayer(50));
     return (
         <div>
             <h1 className="text-3xl">Sign up!</h1>
